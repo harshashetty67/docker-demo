@@ -22,4 +22,4 @@ RUN dotnet publish "WebApiDemo.csproj" -c Release -o /app/publish /p:UseAppHost=
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "WebApiDemo.dll","--server.urls", "http://+:80;https://+:443"]
+ENTRYPOINT ["dotnet", "WebApiDemo.dll"]
