@@ -5,16 +5,23 @@ metadata:
   labels:
     name: myingress
   #annotations:
-  #     nginx.ingress.kubernetes.io/rewrite-target: /api/EchoService
+  #    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
+  defaultBackend:
+    service:
+      name: my-service-echo
+      port:
+        number: 80
   ingressClassName: nginx
   rules:
   - http:
       paths:
       - pathType: Prefix
-        path: "/api/EchoService"
+        path: /api/Echo
         backend:
           service:
             name: my-service-echo
             port: 
               number: 80
+      
+      

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: echo-api
-          image: nightfury17/web-api:v5.0
+          image: nightfury17/web-api:v6.0
           ports:
             - name: http-svc
               containerPort: 80

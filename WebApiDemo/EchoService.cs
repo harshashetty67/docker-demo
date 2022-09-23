@@ -2,15 +2,23 @@
 
 namespace WebApiDemo
 {
-    [Route("api/[controller]")]
+    [Route("api")]
     [ApiController]
     public class EchoService : ControllerBase
     {
-        // GET: api/<EchoService>
-        [HttpGet]
-        public IActionResult Get([FromQuery] string? message="Hello please send message..")
+        // GET: api/<Echo>
+        [HttpGet("{message}")]
+        public IActionResult Echo([FromQuery] string? message = "Send a message..")
         {
             return Ok(message);
+        }
+
+        // Default error message for worng path
+        // GET: api/
+        [HttpGet]
+        public IActionResult Error()
+        {
+            return NotFound("Some Error Occured..");
         }
 
     }

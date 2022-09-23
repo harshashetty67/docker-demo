@@ -3,7 +3,7 @@
     "WebApiDemo": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/EchoService",
+      "launchUrl": "api/Echo",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Production"
       },
@@ -13,7 +13,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/EchoService",
+      "launchUrl": "api/Echo",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -21,7 +21,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/EchoService",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/Echo",
       "publishAllPorts": true,
       "useSSL": true
     }
