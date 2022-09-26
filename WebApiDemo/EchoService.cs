@@ -6,6 +6,7 @@ namespace WebApiDemo
     [ApiController]
     public class EchoService : ControllerBase
     {
+        // Echo service api call
         // GET: api/<Echo>
         [HttpGet("{message}")]
         public IActionResult Echo([FromQuery] string? message = "Send a message..")
@@ -13,7 +14,7 @@ namespace WebApiDemo
             return Ok(message);
         }
 
-        // Default error message for worng path
+        // Default message for Get api call
         // GET: api/
         [HttpGet]
         public IActionResult Error()

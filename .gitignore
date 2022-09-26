@@ -3,3 +3,5 @@
 WebApiDemo/bin
 WebApiDemo/obj
 WebApiDemo/WebApiDemo.csproj.user
+.dockerignore
+DockerExcercise.sln

@@ -31,7 +31,7 @@ spec:
   selector:
     run: echo-service
   ports:
-      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+      # By default and for convenience, the `port` is set to the same value as the `targetPort` field.
     - port: 80
       targetPort: http-svc
      
